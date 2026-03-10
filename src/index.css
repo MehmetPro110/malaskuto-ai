@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Inter', sans-serif;
+
+  --color-primary: #00eeff;
+  --color-background-light: #f5f8f8;
+  --color-background-dark: #0f2223;
+  --color-neutral-dark: #1a3a3d;
+  --color-border-dark: #20484b;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .grid-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(0, 238, 255, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+  }
+  .neon-border {
+    border-color: rgba(0, 238, 255, 0.5);
+  }
+  .glass-panel {
+    background: rgba(15, 34, 35, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 238, 255, 0.1);
+  }
+}
